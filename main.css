@@ -1,0 +1,178 @@
+@font-face {
+    font-family: GothamBlack;
+    src: url("fonts/gotham-black-webfont.woff") format('woff'), url("fonts/gotham-black-webfont.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: GothamBold;
+    src: url("fonts/gotham-bold-webfont.woff") format('woff'), url("fonts/gotham-bold-webfont.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url("fonts/gotham-book-webfont.woff") format('woff'), url("fonts/gotham-book-webfont.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url("fonts/gotham-light-webfont.woff") format('woff'), url("fonts/gotham-light-webfont.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: GothamMedium;
+    src: url("fonts/gotham-medium-webfont.woff") format('woff'), url("fonts/gotham-medium-webfont.ttf") format('truetype');
+}
+
+body {
+    font-family: GothamBook, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    background-color: #EEE;
+    color: #999;
+}
+
+a {
+    color: skyblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: deepskyblue;
+}
+
+#topbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(221, 221, 221, 0.9);
+    z-index: 101;
+    top: 0;
+}
+
+#topbar ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#topbar li {
+    display: inline;
+}
+
+#topbar a {
+    font-family: GothamMedium, sans-serif;
+    display: inline-block;
+    color: #666;
+    padding: 14px 16px;
+    text-align: center;
+    transition: .3s color;
+}
+
+#topbar a.active {
+    color: #999;
+}
+
+#topbar a:hover{
+    color: #999;
+}
+
+.content {
+    margin: 60px;
+    margin-top: 120px;
+}
+
+.image {
+    position: relative;
+}
+
+.imagetext {
+    width: 100%;
+    position: absolute;
+    top: 240px;
+    color: white;
+    text-align: center;
+}
+
+.imagetext h1, imagetext p {
+    color: white;
+}
+
+.imagetext p {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-family: GothamMedium, sans-serif;
+    color: #444;
+}
+
+h1 {
+    font-size: 48pt;
+    letter-spacing:-1px;
+    line-height: 20%;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+p {
+    font-family: GothamBook, sans-serif;
+}
+
+#footer {
+    margin-top: 72px;
+    font-size: 12px;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+p.square, p.squaregrey {
+    padding: 24px;
+}
+
+p.square a, p.squaregrey a {
+    display: inline;
+    font-family: GothamMedium, sans-serif;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 16px;
+    border: 2px;
+    border-style: solid;
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+p.squaregrey a {
+    border-color: #999;
+    color: #999;
+}
+
+p.square a {
+    border-color: white;
+    color: white;
+}
+
+p.squaregrey a:visited {
+    color: #999;
+}
+
+p.square a:visited {
+    color: white;
+}
+
+p.squaregrey a:hover {
+    border-color: #777;
+    color: #777;
+}
+
+p.square a:hover {
+    border-color: #DDD;
+    color: #DDD;
+}
