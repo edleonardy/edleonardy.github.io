@@ -25,12 +25,7 @@
     transform: translate(-50%,-50%);
     width: 33%;
     text-align: center;
-    overflow: hidden;
-}
-
-#maintitle img {
-    width: 100%;
-    display: block;
+    overflow: auto;
 }
 
 @media (min-aspect-ratio: 1/1)
@@ -60,4 +55,19 @@
         height: 50%;
     }
     
+}
+
+#instalink
+{
+    display: block;
+    text-align: center;
+    background: url('ig.png') center top no-repeat;
+    background-size: contain;
+    margin-top: 2em;
+    height: 2em;
+}
+
+#instalink:hover
+{
+    background-image: url('ig_hover.png')
 }
