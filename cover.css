@@ -1,0 +1,54 @@
+#full {
+    width: 100%;
+    height: 100%;
+}
+
+#uno
+{
+    position: relative;
+}
+
+#unochild
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#dos
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('cover.jpg')
+}
+
+@media (min-aspect-ratio: 1/1)
+{
+    #uno
+    {
+        float: left;
+    }
+    
+    #dos
+    {
+        float: right;
+    }
+    
+    #uno, #dos
+    {
+        width: 50%;
+        height: 100%
+    }
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    #uno, #dos
+    {
+        width: 100%;
+        height: 50%;
+    }
+    
+}
