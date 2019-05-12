@@ -1,22 +1,10 @@
-#full {
+#cover {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 
-#uno
-{
-    position: relative;
-}
-
-#unochild
-{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-
-#dos
+#coverimage
 {
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,19 +12,40 @@
     background-image: url('cover.jpg')
 }
 
+#maintitlewrapper
+{
+    position: relative;
+}
+
+#maintitle
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 33%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#maintitle img {
+    width: 100%;
+    display: block;
+}
+
 @media (min-aspect-ratio: 1/1)
 {
-    #uno
+    #coverimage
     {
         float: left;
     }
     
-    #dos
+    #maintitlewrapper
     {
         float: right;
     }
     
-    #uno, #dos
+    #coverimage, #maintitlewrapper
     {
         width: 50%;
         height: 100%
@@ -45,7 +54,7 @@
 
 @media (max-aspect-ratio: 1/1)
 {
-    #uno, #dos
+    #coverimage, #maintitlewrapper
     {
         width: 100%;
         height: 50%;
