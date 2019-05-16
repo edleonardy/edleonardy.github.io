@@ -23,9 +23,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 33%;
     text-align: center;
     overflow: auto;
+    width: 90%
 }
 
 @media (min-aspect-ratio: 1/1)
@@ -63,9 +63,9 @@
     text-align: center;
     background: url('ig.png') center top no-repeat;
     background-size: contain;
-    margin-top: 2em;
-    height: 2em;
-    width: 2em;
+    margin-top: 2rem;
+    height: 2rem;
+    width: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
