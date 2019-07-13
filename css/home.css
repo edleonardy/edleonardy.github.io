@@ -1,0 +1,87 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+#home {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#homeimage
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('/home/display.jpg');
+}
+
+#maintitlewrapper
+{
+    position: relative;
+}
+
+#maintitle
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    overflow: auto;
+    width: 90%
+}
+
+@media (min-aspect-ratio: 1/1)
+{
+    #homeimage
+    {
+        float: left;
+    }
+    
+    #maintitlewrapper
+    {
+        float: right;
+    }
+    
+    #homeimage, #maintitlewrapper
+    {
+        width: 50%;
+        height: 100%
+    }
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    #homeimage, #maintitlewrapper
+    {
+        width: 100%;
+        height: 50%;
+    }
+    
+}
+
+#instalink
+{
+    display: block;
+    text-align: center;
+    background: url('/home/ig.png') center top no-repeat;
+    background-size: contain;
+    margin-top: 2rem;
+    height: 2rem;
+    width: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#instalink:hover
+{
+    background-image: url('/home/ig_hover.png')
+}
+
+body
+{
+    margin: 0;
+}

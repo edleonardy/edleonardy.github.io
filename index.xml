@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ed Leonardy</title>
+    <link>http://edleonardy.com/</link>
+    <description>Recent content on Ed Leonardy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 13 Jul 2019 23:11:46 +0800</lastBuildDate>
+    
+	<atom:link href="http://edleonardy.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Travel Journal</title>
+      <link>http://edleonardy.com/travel/</link>
+      <pubDate>Sat, 13 Jul 2019 23:11:46 +0800</pubDate>
+      
+      <guid>http://edleonardy.com/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My Work</title>
+      <link>http://edleonardy.com/my-work/</link>
+      <pubDate>Sat, 13 Jul 2019 23:11:33 +0800</pubDate>
+      
+      <guid>http://edleonardy.com/my-work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://edleonardy.com/about/</link>
+      <pubDate>Thu, 11 Jul 2019 14:55:33 +0800</pubDate>
+      
+      <guid>http://edleonardy.com/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
