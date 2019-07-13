@@ -1,0 +1,87 @@
+html
+{
+    font-size: 14px;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    html
+    {
+        font-size: 14px;
+    }
+}
+
+body
+{
+    background-color: #FFF;
+    color: #444;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 2rem;
+}
+
+a
+{
+    color: #BBB
+}
+
+a:visited
+{
+    color: #BBB;
+}
+
+a:hover
+{
+    color: #444;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h3
+{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Montserrat Light'),
+        url("/fonts/Montserrat/300.woff") format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat Medium'),
+        url("/fonts/Montserrat/500.woff") format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'),
+        url("/fonts/Montserrat/700.woff") format('woff')
+}
