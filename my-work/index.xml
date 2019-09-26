@@ -2,14 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Work on Ed Leonardy</title>
-    <link>http://edleonardy.com/my-work/</link>
+    <link>https://edleonardy.com/my-work/</link>
     <description>Recent content in My Work on Ed Leonardy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
     <lastBuildDate>Sat, 13 Jul 2019 23:11:46 +0800</lastBuildDate>
     
-	<atom:link href="http://edleonardy.com/my-work/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://edleonardy.com/my-work/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SDH Yearbook</title>
+      <link>https://edleonardy.com/my-work/sdh-yearbook/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://edleonardy.com/my-work/sdh-yearbook/</guid>
+      <description>irene our ketos !!!</description>
+    </item>
+    
+    <item>
+      <title>TICDA</title>
+      <link>https://edleonardy.com/my-work/ticda/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://edleonardy.com/my-work/ticda/</guid>
+      <description>wolves talent is trash
+and that&amp;rsquo;s the tea</description>
+    </item>
     
   </channel>
 </rss>

@@ -3,25 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://edleonardy.com/my-work/</loc>
+    <loc>https://edleonardy.com/my-work/</loc>
     <lastmod>2019-07-13T23:11:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edleonardy.com/travel/</loc>
+    <loc>https://edleonardy.com/travel/</loc>
     <lastmod>2019-07-13T23:11:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edleonardy.com/categories/</loc>
+    <loc>https://edleonardy.com/about/</loc>
+    <lastmod>2019-07-11T14:55:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edleonardy.com/</loc>
+    <loc>https://edleonardy.com/</loc>
+    <lastmod>2019-07-11T14:55:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://edleonardy.com/tags/</loc>
+    <loc>https://edleonardy.com/my-work/sdh-yearbook/</loc>
+    <lastmod>2019-01-01T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://edleonardy.com/my-work/ticda/</loc>
+    <lastmod>2019-01-01T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://edleonardy.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edleonardy.com/tags/</loc>
   </url>
   
 </urlset>
