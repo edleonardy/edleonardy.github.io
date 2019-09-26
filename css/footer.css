@@ -1,0 +1,20 @@
+#footer
+{
+    width: 100%;
+    margin-top: 6.4rem;
+    margin-bottom: 2rem;
+    font-family: nort, sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #7f7f7f;
+}
+
+#footer a, #footer a:hover, #footer a:visited, #footer a:active
+{
+    color: #7f7f7f;
+    font-weight: 500;
+}
+
+

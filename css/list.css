@@ -1,0 +1,78 @@
+.list-item
+{
+    display: block;
+    position: relative;
+    height: 20rem;
+    margin-left: -3.2rem;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.list-img, .list-text-container
+{
+    width: 100vw;
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.list-text-container, .list-text
+{
+    -o-transition: 300ms;
+    -ms-transition: 300ms;
+    -moz-transition: 300ms;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+
+.list-img
+{
+    object-fit: cover;
+}
+
+.list-text-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-text 
+{
+    font-family: nort, sans-serif;
+    color: #f8f8f8;
+    font-size: 2rem;
+    font-weight: 300;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+@media (hover: none)
+{
+    .list-text
+    {
+        opacity: 1;
+    }
+
+    .list-text-container
+    {
+        background-color: rgba(23,23,23,0.4)
+    }
+}
+
+@media (hover: hover)
+{
+    .list-text-container:hover .list-text
+    {
+        opacity: 1;
+    }
+
+    .list-text-container:hover
+    {
+        background-color: rgba(23,23,23,0.4)
+    }
+}
