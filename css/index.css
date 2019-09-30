@@ -41,20 +41,25 @@ body
 
 #title h1
 {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.6rem;
     margin-top: 0;
 }
 
-#title p, #title a
+#title h1 a, #title h1 a:hover
+{
+    font-weight: 500;
+    color: #171717;
+}
+
+#title p, #title p > a
 {
     font-family: ff-meta-serif-web-pro, serif;
     font-weight: 300;
     text-transform: lowercase;
-    font-size: 1rem;
-    margin-bottom: 0.55rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
 }
-
 @media (min-aspect-ratio: 1/1)
 {
 
@@ -105,13 +110,13 @@ body
     display: block;
     text-align: center;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 2.4em;
     margin-bottom: 0rem;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 1.4rem;
+    width: 1.4rem;
 }
 
-#instagram > svg > path
+#instasvg
 {
     fill: #171717;
     -o-transition: 300ms;
@@ -121,7 +126,7 @@ body
     transition: 300ms;
 }
 
-#instagram:hover > svg > path
+#instagram svg:hover #instasvg
 {
     fill: #7F7F7F;
 }

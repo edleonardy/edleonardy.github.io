@@ -2,13 +2,14 @@
 {
     display: block;
     position: relative;
-    height: 20rem;
+    height: 16rem;
     margin-left: -3.2rem;
     width: 100vw;
     overflow: hidden;
+    background-color: #364d3f
 }
 
-.list-img, .list-text-container
+.list-img, .list-text-container, .no-img
 {
     width: 100vw;
     height: 20rem;

@@ -2,7 +2,7 @@
 
 html
 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 *
@@ -22,7 +22,7 @@ img
     width: 100vw;
     height: auto;
     margin-top: 0;
-    margin-left: -3.2rem;
+    margin-left: calc(-3.2rem - env(safe-area-inset-left));
     padding: 0;
     object-fit: cover;
 }
@@ -69,13 +69,14 @@ body
     font-family: ff-meta-serif-web-pro, serif;
     font-weight: 300;
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 #content
 {
     max-width: 100%;
-    padding: 3.2rem;
+    padding-left: calc(env(safe-area-inset-left) + 3.2rem);
+    padding-right: calc(env(safe-area-inset-right) + 3.2rem);
     padding-top: 4.8rem;
     padding-bottom: 2rem;
     word-wrap: break-word;
@@ -150,18 +151,15 @@ h1 {
     display: block;
     text-align: center;
     font-weight: 500;
-    font-size: 2em;
     margin-bottom: 3.2rem;
 }
 
 h2 {
     font-weight: 100;
-    font-size: 1.6rem;
 }
 
 h3
 {
-    font-size: 1.2rem;
     font-weight: 300;
 }
 
@@ -169,6 +167,39 @@ p
 {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
+}
+
+@media (min-aspect-ratio: 1/1)
+{
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3
+    {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3
+    {
+        font-size: 1.15rem;
+    }
+
 }
 
 h1#with-date
