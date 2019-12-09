@@ -11,20 +11,38 @@ body
     overflow: hidden;
 }
 
-#image
+#background
 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 #titlecontainer
 {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#profileimg
+{
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 0 2rem 0;
+}
+
+#titlecontainer
+{
     display: flex;
     align-items: center;
     text-align: center;
@@ -41,68 +59,37 @@ body
 
 #title h1
 {
-    font-size: 1.2rem;
-    margin-bottom: 1.6rem;
-    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    text-transform: lowercase;
 }
 
 #title h1 a, #title h1 a:hover
 {
-    font-weight: 500;
+    font-weight: 600;
     color: #171717;
 }
 
-#title p, #title p > a
+#bio, #bio > a
 {
-    font-family: ff-meta-serif-web-pro, serif;
-    font-weight: 300;
-    text-transform: lowercase;
-    font-size: 0.8rem;
-    margin-bottom: 0.4rem;
-}
-@media (min-aspect-ratio: 1/1)
-{
-
-    #image
-    {
-        position: absolute;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        z-index: 0;
-    }
-    
-    #titlecontainer
-    {
-        position: absolute;
-        left: 50%;
-        width: 50%;
-        height: 100%;
-        z-index: 1;
-    }
+    font-family: ff-tisa-web-pro, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.84rem;
+    line-height: 1.4rem;
+    margin-bottom: 4rem;
 }
 
-@media (max-aspect-ratio: 1/1)
-{
 
-    #image
-    {
-        position: absolute;
-        top: 0;
-        height: 50%;
-        width: 100%;
-        z-index: 0;
-        
-    }
-    
-    #titlecontainer
-    {
-        position: absolute;
-        top: 50%;
-        height: 50%;
-        width: 100%;
-        z-index: 1;
-    }
+#front-links, #front-links > a
+{
+    font-family: nort, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
 }
 
 #instagram
@@ -110,10 +97,9 @@ body
     display: block;
     text-align: center;
     margin: auto;
-    margin-top: 2.4em;
-    margin-bottom: 0rem;
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1rem;
+    width: 1rem;
+    padding: 0.2rem;
 }
 
 #instasvg

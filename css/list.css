@@ -1,79 +1,89 @@
-.list-item
+
+
+@media (max-aspect-ratio: 1/1)
+{
+    #list-container
+    {
+        margin-top: 1.6rem;
+    }
+    
+    .list-item
+    {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-aspect-ratio: 1/1)
+{
+    #list-container
+    {
+        margin-top: 3.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-item
+    {
+        width: 21rem;
+        display: inline-block;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.list-img-container
 {
     display: block;
     position: relative;
-    height: 16rem;
-    margin-left: -3.2rem;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
-    background-color: #364d3f
+    padding-top: 125%;
+    height: 0;
+    background-color: #7f7f7f;
 }
 
-.list-img, .list-text-container, .no-img
+.list-img
 {
-    width: 100vw;
-    height: 20rem;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     margin: 0;
     overflow: hidden;
     text-align: center;
+    -o-transition: 200ms;
+    -ms-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
+    transition: 200ms;
 }
 
-.list-text-container, .list-text
-{
-    -o-transition: 300ms;
-    -ms-transition: 300ms;
-    -moz-transition: 300ms;
-    -webkit-transition: 300ms;
-    transition: 300ms;
-}
-
-.list-img
-{
-    object-fit: cover;
-}
 
 .list-text-container
 {
     display: flex;
+    position: absolute;
+    bottom: 2.4rem;
+    width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 11;
 }
 
 .list-text 
 {
     font-family: nort, sans-serif;
-    color: #f8f8f8;
-    font-size: 2rem;
-    font-weight: 300;
-    opacity: 0;
+    color: #171717;
+    background-color: #f8f8f8;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.32rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
-}
-
-@media (hover: none)
-{
-    .list-text
-    {
-        opacity: 1;
-    }
-
-    .list-text-container
-    {
-        background-color: rgba(23,23,23,0.4)
-    }
-}
-
-@media (hover: hover)
-{
-    .list-text-container:hover .list-text
-    {
-        opacity: 1;
-    }
-
-    .list-text-container:hover
-    {
-        background-color: rgba(23,23,23,0.4)
-    }
+    max-width: 60%;
 }

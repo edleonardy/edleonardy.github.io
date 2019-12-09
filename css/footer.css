@@ -1,20 +1,39 @@
-#footer
+#footer, #footer a
 {
     width: 100%;
     margin-top: 4.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.4rem;
     font-family: nort, sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    line-height: 0.8rem;
+    font-weight: 400;
+    font-size: 0.6rem;
+    line-height: 0.3rem;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
     text-align: center;
-    color: #7f7f7f;
+    color: #888888;
 }
 
 #footer a, #footer a:hover, #footer a:visited, #footer a:active
 {
-    color: #7f7f7f;
-    font-weight: 500;
+    color: #888888;
 }
 
+#footer svg
+{
+    width: 1rem;
+    height: 1rem;
+    margin-top: 1rem;
+}
 
+#footer svg *
+{
+    fill: #888888!important;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    #footer #ig
+    {
+        display: none;
+    }
+}
