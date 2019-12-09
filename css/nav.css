@@ -39,6 +39,11 @@ html, body
     color: #171717;
 }
 
+#nav a:hover
+{
+    text-decoration: none;
+}
+
 #nav #hamburger, #nav #ig
 {
     display: flex;
@@ -162,11 +167,6 @@ html, body
 #links ul li a, #links ul li a:active 
 {
     color: #171717;
-}
-
-#links ul li a:hover
-{
-    color: #364d3f;
 }
 
 #x

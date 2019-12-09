@@ -16,6 +16,7 @@
 #footer a, #footer a:hover, #footer a:visited, #footer a:active
 {
     color: #888888;
+    text-decoration: none;
 }
 
 #footer svg

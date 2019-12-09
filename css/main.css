@@ -101,36 +101,12 @@ a, a:visited, a:active
 
 a
 {
-    -o-transition: 300ms;
-    -ms-transition: 300ms;
-    -moz-transition: 300ms;
-    -webkit-transition: 300ms;
-    transition: 300ms;
+    text-decoration: none;
 }
 
 a:hover
 {
-    color: #888888;
-}
-
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-}
-
-svg.logo-a path
-{
-    fill: #171717!important;
-    -o-transition: 300ms;
-    -ms-transition: 300ms;
-    -moz-transition: 300ms;
-    -webkit-transition: 300ms;
-    transition: 300ms;
-}
-
-svg.logo-a:hover path
-{
-    fill: #888888!important;
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6
