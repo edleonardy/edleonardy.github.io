@@ -4,7 +4,7 @@
 {
     #list-container
     {
-        margin-top: 1.6rem;
+        margin-top: 2.4rem;
     }
     
     .list-item
@@ -86,4 +86,9 @@
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     max-width: 60%;
+}
+
+.list-item:hover .list-text
+{
+    text-decoration: underline;
 }

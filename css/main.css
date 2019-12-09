@@ -43,6 +43,7 @@ figure
 figcaption > h4
 {
     text-align: center;
+    font-family: nort, sans-serif;
     margin-top: 0.4rem;
     font-size: 0.8rem;
     letter-spacing: 0.05rem;
