@@ -10,11 +10,6 @@ function getPosErr(pos)
     var geoLng = 119.42001688999994;
 }
 
-if (navigator.geolocation)
-{
-    navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
-}
-
 function getPosErr(err) {
     switch (err.code) {
         case err.PERMISSION_DENIED:
@@ -67,6 +62,11 @@ function ShowTime()
 
 function ShowWeather()
 {
+    if (navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
+    }
+
     var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
     $.getJSON(URLRequest, function(data)
     {
