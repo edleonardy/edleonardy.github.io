@@ -35,12 +35,18 @@ function ShowTime()
 function getPosSuccess(pos) {
     var geoLat = pos.coords.latitude.toFixed(5);
     var geoLng = pos.coords.longitude.toFixed(5);
-    var geoAcc = pos.coords.accuracy.toFixed(1);
+
+    var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
+        $.getJSON(URLRequest, function(data)
+        {
+            var main = data.currently.summary;
+            var temp = data.main.temperature - 273.15;
+            document.getElementById('temp').innerHTML = temp + "ºC";
+            document.getElementById('weather-condition').innerHTML = main;
+        })
 }
 
 function getPosErr(err) {
-    var geoLat = -5.1393606799999985;
-    var geoLng = 119.42001688999994;
     switch (err.code) {
         case err.PERMISSION_DENIED:
             alert("User denied the request for Geolocation.");
@@ -61,14 +67,6 @@ function ShowWeather()
     if (navigator.geolocation)
     {
         navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
-        var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
-        $.getJSON(URLRequest, function(data)
-        {
-            var main = data.currently.summary;
-            var temp = data.main.temperature - 273.15;
-            document.getElementById('temp').innerHTML = temp + "ºC";
-            document.getElementById('weather-condition').innerHTML = main;
-        })
     }
 
     window.setTimeout("ShowTime()", 600000);
