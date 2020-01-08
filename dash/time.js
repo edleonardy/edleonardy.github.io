@@ -2,16 +2,17 @@ if (navigator.geolocation)
 {
     navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
 }
-else
-{
-    var geoLat = -5.1393606799999985;
-    var geoLong = 119.42001688999994;
-}
 
 function getPosSuccess(pos) {
     var geoLat = pos.coords.latitude.toFixed(5);
     var geoLng = pos.coords.longitude.toFixed(5);
     var geoAcc = pos.coords.accuracy.toFixed(1);
+}
+
+function getPosSuccess(pos)
+{
+    var geoLat = -5.1393606799999985;
+    var geoLng = 119.42001688999994;
 }
 
 function getPosErr(err) {
@@ -71,9 +72,9 @@ function ShowWeather()
     {
         var main = data.currently.summary;
         var temp = data.main.temperature - 273.15;
+        document.getElementById('temp').innerHTML = temp + "ºC";
+        document.getElementById('weather-condition').innerHTML = main;
     })
 
-    document.getElementById('temp').innerHTML = temp + "ºC";
-    document.getElementById('weather-condition').innerHTML = main;
     window.setTimeout("ShowTime()", 600000);
 }
