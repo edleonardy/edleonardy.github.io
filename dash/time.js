@@ -4,8 +4,8 @@ if (navigator.geolocation)
 }
 else
 {
-    var main = "Weather unavailable";
-    var temp = "?";
+    geoLat = -5.1393606799999985;
+    geoLong = 119.42001688999994;
 }
 
 function getPosSuccess(pos) {
@@ -66,10 +66,7 @@ function ShowTime()
 
 function ShowWeather()
 {
-
-    geoLat = 1;
-    geoLng = 1;
-    var URLRequest = "https://weather-retriever-ed-herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
+    var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
     $.getJSON(URLRequest, function(data)
     {
         var main = data.currently.summary;
