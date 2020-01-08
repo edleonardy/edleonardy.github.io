@@ -4,8 +4,8 @@ if (navigator.geolocation)
 }
 else
 {
-    geoLat = -5.1393606799999985;
-    geoLong = 119.42001688999994;
+    var geoLat = -5.1393606799999985;
+    var geoLong = 119.42001688999994;
 }
 
 function getPosSuccess(pos) {
