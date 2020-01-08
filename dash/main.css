@@ -90,12 +90,17 @@ h2
 {
     font-family: nort, sans-serif;
     font-size: 1.6rem;
-    margin-bottom: 0;
+    margin-bottom: 0.2rem;
 }
 
-#weather-condition
+#weather-condition, #location
 {
     font-family: nort, sans-serif;
     font-size: 0.8rem;
     margin-top: 0;
+}
+
+#location
+{
+    margin-bottom: -0.2rem;
 }

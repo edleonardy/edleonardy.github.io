@@ -36,14 +36,47 @@ function getPosSuccess(pos) {
     var geoLat = pos.coords.latitude.toFixed(5);
     var geoLng = pos.coords.longitude.toFixed(5);
 
-    var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + geoLat.toString() + "&lon=" + geoLng.toString()
-    $.getJSON(URLRequest, function(data)
+    var weatherUrl = "https://weather-retriever-ed.herokuapp.com/?lat=" + geoLat.toString() + "&lon=" + geoLng.toString()
+    $.getJSON(weatherUrl, function(data)
     {
         var main = data.currently.summary;
         var temp = data.currently.temperature;
-        document.getElementById('temp').innerHTML = Math.round(parseFloat(temp) - 273.15).toString() + "ºC";
+        document.getElementById('temp').innerHTML = temp + "ºC";
         document.getElementById('weather-condition').innerHTML = main;
     })
+
+    var reverseGeoUrl = "https://nominatim.openstreetmap.org/reverse?lat=" + geoLat.toString() + "&lon=" + geoLng.toString()
+    
+    $.ajax({
+        type: "GET",
+        url: reverseGeoUrl,
+        dataType: "xml",
+        success: function(xml)
+        {
+            $(xml).find('addressparts').each(function()
+            {
+                var location = $(this).find("country").text()
+                if (location != null)
+                {
+                    var left_hand_side = $(this).find("city").text();
+                    if (left_hand_side == null)
+                    {
+                        var left_hand_side = $(this).find("county").text();
+                        if (left_hand_side == null)
+                        {
+                            var left_hand_side = $(this).find("state").text();
+                        }
+                    }
+                    if (left_hand_side == null)
+                    {
+                        left_hand_side + ", " + location
+                    }
+                    document.getElementById('location').innerHTML = location;
+                }
+            })
+        }
+    });
+
 }
 
 function getPosErr(err) {
