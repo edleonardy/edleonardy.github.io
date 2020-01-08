@@ -1,12 +1,11 @@
-/*
 if (navigator.geolocation)
 {
     navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
 }
 else
 {
-    var main = "Weather not available"
-    var temp = "?"
+    var main = "Weather unavailable";
+    var temp = "?";
 }
 
 function getPosSuccess(pos) {
@@ -30,10 +29,6 @@ function getPosErr(err) {
             alert("An unknown error occurred.");
     }
 }
-*/
-
-geoLat = 22.396427
-geoLng = 114.109497
 
 $(document).ready(function()  
         {  
@@ -45,7 +40,6 @@ function ShowTime()
 {
     var d = new Date($.now());
     document.getElementById('time').innerHTML = d.toLocaleTimeString("en-GB");
-    window.setTimeout("ShowTime()", 1000);
 
     var h = d.getHours()
     var g = ""
@@ -67,18 +61,22 @@ function ShowTime()
     }
 
     document.getElementById('greeting').innerHTML = g;
+    window.setTimeout("ShowTime()", 1000);
 }
 
 function ShowWeather()
 {
+
+    geoLat = 1;
+    geoLng = 1;
     var URLRequest = "http://weather-retriever.edleonardy.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
-    $.getJSON(URLRequest)
-    .done(function(data)
+    $.getJSON(URLRequest, function(data)
     {
         var main = data.currently.summary;
         var temp = data.main.temperature - 273.15;
     })
+
     document.getElementById('temp').innerHTML = temp + "ºC";
     document.getElementById('weather-condition').innerHTML = main;
-    document.getElementById('greeting').innerHTML = city + ", " + country;
+    window.setTimeout("ShowTime()", 600000);
 }
