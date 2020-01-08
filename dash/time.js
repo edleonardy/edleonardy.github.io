@@ -69,7 +69,7 @@ function ShowWeather()
 
     geoLat = 1;
     geoLng = 1;
-    var URLRequest = "http://weather-retriever.edleonardy.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
+    var URLRequest = "https://weather-retriever-ed-herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
     $.getJSON(URLRequest, function(data)
     {
         var main = data.currently.summary;
