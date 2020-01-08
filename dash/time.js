@@ -1,18 +1,18 @@
-if (navigator.geolocation)
-{
-    navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
-}
-
 function getPosSuccess(pos) {
     var geoLat = pos.coords.latitude.toFixed(5);
     var geoLng = pos.coords.longitude.toFixed(5);
     var geoAcc = pos.coords.accuracy.toFixed(1);
 }
 
-function getPosSuccess(pos)
+function getPosErr(pos)
 {
     var geoLat = -5.1393606799999985;
     var geoLng = 119.42001688999994;
+}
+
+if (navigator.geolocation)
+{
+    navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
 }
 
 function getPosErr(err) {
