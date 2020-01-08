@@ -40,8 +40,8 @@ function getPosSuccess(pos) {
         $.getJSON(URLRequest, function(data)
         {
             var main = data.currently.summary;
-            var temp = data.main.temperature;
-            document.getElementById('temp').innerHTML = "{}ºC".format(round(float(temp - 273.15), 2));
+            var temp = data.currently.temperature;
+            document.getElementById('temp').innerHTML = "{}ºC".format(round(float(temp - 273.15), 1));
             document.getElementById('weather-condition').innerHTML = main;
         })
 }
