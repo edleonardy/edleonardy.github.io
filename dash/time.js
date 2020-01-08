@@ -1,31 +1,3 @@
-function getPosSuccess(pos) {
-    var geoLat = pos.coords.latitude.toFixed(5);
-    var geoLng = pos.coords.longitude.toFixed(5);
-    var geoAcc = pos.coords.accuracy.toFixed(1);
-}
-
-function getPosErr(pos)
-{
-    var geoLat = -5.1393606799999985;
-    var geoLng = 119.42001688999994;
-}
-
-function getPosErr(err) {
-    switch (err.code) {
-        case err.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
-            break;
-        case err.POSITION_UNAVAILABLE:
-            alert("Location information is unavailable.");
-            break;
-        case err.TIMEOUT:
-            alert("The request to get user location timed out.");
-            break;
-        default:
-            alert("An unknown error occurred.");
-    }
-}
-
 $(document).ready(function()  
         {  
             ShowTime();  
@@ -60,21 +32,44 @@ function ShowTime()
     window.setTimeout("ShowTime()", 1000);
 }
 
+function getPosSuccess(pos) {
+    var geoLat = pos.coords.latitude.toFixed(5);
+    var geoLng = pos.coords.longitude.toFixed(5);
+    var geoAcc = pos.coords.accuracy.toFixed(1);
+}
+
+function getPosErr(err) {
+    var geoLat = -5.1393606799999985;
+    var geoLng = 119.42001688999994;
+    switch (err.code) {
+        case err.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.");
+            break;
+        case err.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            break;
+        case err.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+        default:
+            alert("An unknown error occurred.");
+    }
+}
+
 function ShowWeather()
 {
     if (navigator.geolocation)
     {
         navigator.geolocation.getCurrentPosition(getPosSuccess, getPosErr);
+        var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
+        $.getJSON(URLRequest, function(data)
+        {
+            var main = data.currently.summary;
+            var temp = data.main.temperature - 273.15;
+            document.getElementById('temp').innerHTML = temp + "ºC";
+            document.getElementById('weather-condition').innerHTML = main;
+        })
     }
-
-    var URLRequest = "https://weather-retriever-ed.herokuapp.com/?lat=" + String(geoLat) + "&lon=" + String(geoLng)
-    $.getJSON(URLRequest, function(data)
-    {
-        var main = data.currently.summary;
-        var temp = data.main.temperature - 273.15;
-        document.getElementById('temp').innerHTML = temp + "ºC";
-        document.getElementById('weather-condition').innerHTML = main;
-    })
 
     window.setTimeout("ShowTime()", 600000);
 }
