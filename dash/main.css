@@ -6,45 +6,83 @@ body
     color: #f8f8f8;
 }
 
-body, #bg, #center
+body, #bg
 {
     width: 100vw;
     height: 100vh;
 }
 
-#bg, #center
+#content-container
+{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    #content-container
+    {
+        top: 2.8rem;
+        height: calc(100vh - 5.6rem);
+    }
+    
+    h1
+    {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        margin: 0;
+    }
+}
+
+@media (min-aspect-ratio: 1/1)
+{
+    #content-container
+    {
+        top: 4.8rem;
+        height: calc(100vh - 9.6rem);
+        min-height: 20rem;
+    }
+
+    h1
+    {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        margin: 0;
+    }
+}
+
+#bg
 {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 0;
+}
+
+img#bg
+{
+    object-fit: cover;
+}
+
+#top, #center, #bottom
+{
+    width: 100%;
+    z-index: 1; 
 }
 
 #top, #bottom
 {
     height: 4.8rem;
-    width: 100vw;
-    position: absolute;
-    z-index: 2;
     font-family: nort, sans-serif;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.04rem;
 }
 
-
-#top
+#center
 {
-    top: 1rem;
-}
-
-#bottom
-{
-    bottom: 1rem;
-}
-
-#center, .corner
-{
+    height: calc(100% - 9.6rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,51 +94,31 @@ body, #bg, #center
     text-align: center;
 }
 
-h1
-{
-    font-size: 6rem;
-    line-height: 6rem;
-    margin-bottom: -0.5rem;
-}
-
-h2
-{
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-    margin-top: -0.5rem;
-}
-
-.corner
+#top-contents, #bottom-contents
 {
     position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
-.left
+#top-contents
 {
-    left: 2rem;
+    top: 0;
 }
 
-.right
+#bottom-contents
 {
-    right: 2rem;
-    text-align: right;
+    bottom: 0;
 }
 
-#temp
+#logo svg 
 {
-    font-family: nort, sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 0.2rem;
+    width: 4rem;
+    height: 4rem;
 }
 
-#weather-condition, #location
+h1
 {
-    font-family: nort, sans-serif;
-    font-size: 0.8rem;
-    margin-top: 0;
-}
-
-#location
-{
-    margin-bottom: -0.2rem;
+    font-weight: 300;
 }
