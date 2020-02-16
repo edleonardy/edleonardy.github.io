@@ -3,8 +3,8 @@
 :root {
     --bg-color: #f8f8f8;
     --translucent-bg-color: rgba(248,248,248,0.4);
-    --main-color: #171717;
-    --accent-color: #543e32;
+    --main-color: #0D1011;
+    --accent-color: #7D523B;
     --grey: #7f7f7f;
 }
 
@@ -88,11 +88,12 @@ ul
     padding-left: 1rem;
     margin-bottom: 1rem;
     font-size: 0.875rem;
+    line-height: 1.8;
 }
 
 ul li:before
 {
-    content: "— "
+    content: "– "
 }
 
 img

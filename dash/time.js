@@ -18,17 +18,17 @@ function ShowTime()
     }
     else if (h < 12)
     {
-        g = "zou san. good morning.";
+        g = "zou san.";
         imgSrc = "morning.jpg";
     }
     else if (h < 18)
     {
-        g = "buenas tardes. good afternoon.";
+        g = "buenas tardes.";
         imgSrc = "afternoon.jpg";
     }
     else
     {
-        g = "malam. good evening.";
+        g = "malam.";
         imgSrc = "evening.jpg";
     }
 

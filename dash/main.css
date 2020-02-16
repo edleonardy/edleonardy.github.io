@@ -1,5 +1,12 @@
 @import url("https://use.typekit.net/bbc6bjd.css");
 
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
 body
 {
     background-color: #171717;
@@ -12,7 +19,7 @@ body, #bg
     height: 100vh;
 }
 
-#content-container
+#dash-container
 {
     position: absolute;
     z-index: 1;
@@ -21,7 +28,7 @@ body, #bg
 
 @media (max-aspect-ratio: 1/1)
 {
-    #content-container
+    #dash-container
     {
         top: 2.8rem;
         height: calc(100vh - 5.6rem);
@@ -37,7 +44,7 @@ body, #bg
 
 @media (min-aspect-ratio: 1/1)
 {
-    #content-container
+    #dash-container
     {
         top: 4.8rem;
         height: calc(100vh - 9.6rem);
