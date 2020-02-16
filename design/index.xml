@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design &amp; Branding on Ed Leonardy</title>
+    <link>https://edleonardy.com/design/</link>
+    <description>Recent content in Design &amp; Branding on Ed Leonardy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://edleonardy.com/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tocha</title>
+      <link>https://edleonardy.com/design/2020/tocha/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://edleonardy.com/design/2020/tocha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artee</title>
+      <link>https://edleonardy.com/design/2020/artee/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://edleonardy.com/design/2020/artee/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

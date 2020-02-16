@@ -28,15 +28,9 @@ html, body
     transition: 100ms;
 }
 
-#nav #navmain
-{
-    width: 100%;
-    margin: auto;
-}
-
 #nav a, #nav a:hover, #nav a:visited, #nav a:active 
 {
-    color: #171717;
+    color: var(--main-color);
 }
 
 #nav a:hover
@@ -44,26 +38,44 @@ html, body
     text-decoration: none;
 }
 
-#nav #hamburger, #nav #ig
-{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    width: 3.6rem;
-    margin: 0;
-}
-
-#hamburger svg, #ig svg
-{
-    height: 1rem;
-    width: 1rem;
-    margin: auto;
-}
-
 #nav svg *
 {
-    fill: #171717!important;
+    fill: var(--main-color)!important;
+}
+
+
+@media (max-aspect-ratio: 1/1)
+{
+    #nav #nav-links
+    {
+        display: none;
+    }
+
+    #nav #moon, #nav #right
+    {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 3.6rem;
+        height: 100%;
+    }
+
+    #nav #moon
+    {
+        margin: auto auto auto 1.6rem;
+    }
+
+    #nav #right
+    {
+        margin: auto 1.6rem auto auto;
+    }
+
+    #right svg
+    {
+        height: 1rem;
+        width: 1rem;
+        margin: auto;
+    }
 }
 
 #links
@@ -87,7 +99,7 @@ html, body
     height: 100%;
     visibility: visible;
     transform: translateY(calc(3.6rem - 100%));
-    background-color: rgba(248,248,248,0.4);
+    background-color: var(--translucent-bg-color);
     -webkit-backdrop-filter: blur(0.8rem);
     -moz-backdrop-filter: blur(0.8rem);
     -ms-backdrop-filter: blur(0.8rem);
@@ -158,20 +170,99 @@ html, body
     align-items: center;
 }
 
-#links svg
-{
-    height: 1rem;
-    width: 1rem;
-}
-
 #links ul li a, #links ul li a:active 
 {
-    color: #171717;
+    color: var(--main-color);
 }
 
-#x
+#links ul li#links-icons a
 {
-    margin-bottom: 2rem;
+    display: inline-block;
+    text-align: center;
+    margin: auto 0.2rem;
+    padding: 0.2rem;
+}
+
+#links-icons #youtube
+{
+    width: 1.5rem;
+    height: 1rem;
+}
+
+#links-icons #instagram
+{
+    width: 1rem;
+    height: 1rem;
+}
+
+#links-icons a svg *
+{
+    fill: var(--main-color);
+    -o-transition: 300ms;
+    -ms-transition: 300ms;
+    -moz-transition: 300ms;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    opacity: 1;
+}
+
+#links-icons:hover a svg *
+{
+    opacity: 0.33;
+}
+
+#links-icons a:hover svg *
+{
+    opacity: 1;
+}
+
+
+@media (min-aspect-ratio: 1/1)
+{
+    #nav #moon
+    {
+        width: 100%;
+        margin: auto;
+    }
+
+    #nav #right
+    {
+        display: none;
+    }
+
+    #nav-links
+    {
+        margin: 0 4.8rem 0 0;
+        height: 100%;
+        display: flex;
+    }
+
+    #nav #nav-links a
+    {
+        display: block;
+        font-family: nort, sans-serif;
+        font-weight: 400;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        margin: auto 0.8rem auto 0.8rem;
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #nav #moon
+    {
+        align-content: left;
+        justify-content: left;
+        margin-left: 4.8rem;
+    }
+
+    #moon svg
+    {
+        width: 3.6rem;
+    }
 }
 
 @keyframes bg-slidein
@@ -257,56 +348,5 @@ html, body
     {
         opacity: 0;
         transform: translateY(-100%);
-    }
-}
-
-@media (max-aspect-ratio: 1/1)
-{
-    #nav #navlinks
-    {
-        display: none;
-    }
-}
-
-@media (min-aspect-ratio: 1/1)
-{
-
-    #nav #ig, #nav #hamburger
-    {
-        display: none;
-    }
-
-    #navlinks
-    {
-        margin: 0 4.8rem 0 0;
-        height: 100%;
-        display: flex;
-    }
-
-    #nav #navlinks a
-    {
-        display: block;
-        font-family: nort, sans-serif;
-        font-weight: 400;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05rem;
-        margin: auto 0.8rem auto 0.8rem;
-        width: auto;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    #nav #navmain
-    {
-        align-content: left;
-        justify-content: left;
-        margin-left: 4.8rem;
-    }
-
-    #navmain svg
-    {
-        width: 3.6rem;
     }
 }

@@ -1,3 +1,7 @@
+:root {
+    --footer-color: var(--grey);
+}
+
 #footer::before
 {
     content: "";
@@ -6,47 +10,85 @@
     height: 0;
 }
 
-#footer p
-{
-    margin: 0.8rem;
-}
-
-#footer, #footer a
+#footer
 {
     width: 100%;
-    margin-top: 4.8rem;
-    margin-bottom: 2.4rem;
+    margin: 5.6rem auto 1.6rem;
+    text-align: center;
+}
+
+#footer-links
+{
     font-family: nort, sans-serif;
+    margin-bottom: 1.2rem;
     font-weight: 400;
     font-size: 0.6rem;
     line-height: 0.3rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
-    text-align: center;
-    color: #888888;
+    color: var(--grey);
+}
+
+#footer-links a
+{
+    display: block;
+}
+
+#footer-links p, #footer-links a
+{
+    margin-bottom: 0.9rem;
 }
 
 #footer a, #footer a:hover, #footer a:visited, #footer a:active
 {
-    color: #888888;
+    color: var(--grey);
     text-decoration: none;
 }
 
-#footer svg
+#footer-icons a
 {
-    width: 1rem;
-    height: 1rem;
-    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    padding: 0.2rem;
 }
 
-#footer svg *
+#footer-icons #instagram
 {
-    fill: #888888!important;
+    height: 1rem;
+    width: 1rem;
+}
+
+#footer-icons #youtube
+{
+    height: 1rem;
+    width: 1.5rem;
+}
+
+#footer-icons a svg *
+{
+    fill: var(--grey);
+    -o-transition: 300ms;
+    -ms-transition: 300ms;
+    -moz-transition: 300ms;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    opacity: 1;
+}
+
+#footer-icons:hover a svg path, #front-icons:hover a svg g
+{
+    opacity: 0.33;
+}
+
+#footer-icons a:hover svg path, #front-icons a:hover svg g
+{
+    opacity: 1;
 }
 
 @media (max-aspect-ratio: 1/1)
 {
-    #footer #ig
+    #footer #footer-icons
     {
         display: none;
     }

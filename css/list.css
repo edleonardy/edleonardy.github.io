@@ -42,7 +42,7 @@
     overflow: hidden;
     padding-top: 125%;
     height: 0;
-    background-color: #7f7f7f;
+    background-color: var(--grey);
 }
 
 .list-img
@@ -77,8 +77,8 @@
 .list-text 
 {
     font-family: nort, sans-serif;
-    color: #171717;
-    background-color: #f8f8f8;
+    color: var(--main-color);
+    background-color: var(--bg-color);
     padding: 0.8rem 1.2rem;
     font-size: 0.8rem;
     line-height: 1.32rem;

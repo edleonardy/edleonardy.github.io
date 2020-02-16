@@ -13,21 +13,26 @@ function ShowTime()
     var g = ""
     if (h < 6)
     {
-        g = "it's late wtf are u doing?";
+        g = "..it's late just go to bed";
+        imgSrc = "late.jpg";
     }
     else if (h < 12)
     {
         g = "zou san. good morning.";
+        imgSrc = "morning.jpg";
     }
     else if (h < 18)
     {
         g = "buenas tardes. good afternoon.";
+        imgSrc = "afternoon.jpg";
     }
     else
     {
-        g = "selamat malam. good evening.";
+        g = "malam. good evening.";
+        imgSrc = "evening.jpg";
     }
 
     document.getElementById('greeting').innerHTML = g;
+    document.getElementById("bg").src=imgSrc;
     window.setTimeout("ShowTime()", 1000);
 }
