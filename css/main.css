@@ -8,7 +8,7 @@
     --grey: #7f7f7f;
 }
 
-@media (prefers-color-scheme: dark)
+@media screen and (max-device-width: 640px) and (prefers-color-scheme: dark) /* only dark mode on phones */
 {
     :root {
         --bg-color: #0D1011;

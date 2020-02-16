@@ -1,6 +1,9 @@
-:root {
-    --bg-color: #0D1011;
-    --translucent-bg-color: rgba(13,16,17,0.72);
-    --main-color: #f8f8f8;
-    --accent-color: #cbb2a4;
+@media (min-device-width: 640px)
+{
+    :root {
+        --bg-color: #0D1011;
+        --translucent-bg-color: rgba(13,16,17,0.72);
+        --main-color: #f8f8f8;
+        --accent-color: #cbb2a4;
+    }
 }
