@@ -33,7 +33,7 @@ function ShowTime()
     weekText = "week " + weekOfYear(date) + " of " + weeksOfYear(date) + ".";
     yearText = "year " + percentageYear(date) + " completed.";
 
-    greeting = date.toLocaleDateString("zh-TW") + weekText + "<br/>" + yearText
+    greeting = weekText + "<br/>" + yearText;
     document.getElementById('greeting').innerHTML = greeting;
     window.setTimeout("ShowTime()", 1000);
 }
