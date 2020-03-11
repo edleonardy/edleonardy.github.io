@@ -13,60 +13,26 @@ function ShowTime()
     var hour = date.getHours()
     var greetingText = ""
 
-    if (hour < 6)
+    if (hour < 5)
     {
-        greetingText = "..it's late just go to bed";
+        greetingText = "please just go to bed.";
+    }
+    else if (hour < 8)
+    {
+        greetingText = "good morning! thank you for starting early.";
     }
     else if (hour < 12)
     {
-        greetingText = "zou san.";
+        greetingText = "good morning! have a great day.";
     }
     else if (hour < 18)
     {
-        greetingText = "buenas tardes.";
+        greetingText = "hello. good afternoon!";
     }
     else
     {
-        greetingText = "malam.";
+        greetingText = "good evening.";
     }
-
-    weekText = "week " + weekOfYear(date) + " of " + weeksOfYear(date) + ".";
-    yearText = "year " + percentageYear(date) + " completed.";
-
-    greeting = weekText + "<br/>" + yearText;
-    document.getElementById('greeting').innerHTML = greeting;
+    document.getElementById('greeting').innerHTML = greetingText;
     window.setTimeout("ShowTime()", 1000);
 }
-
-function dayOfYear(date)
-{
-    var start = new Date(date.getFullYear(), 0, 0);
-    var difference = (date - start) + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000);
-    var oneDay = 1000 * 60 * 60 * 24;
-    return Math.floor(difference / oneDay);
-}
-
-function daysOfYear(date)
-{
-    var end = new Date(date.getFullYear()+1, 0, 0);
-    return dayOfYear(end);
-}
-
-function weekOfYear(date)
-{
-    var day = dayOfYear(date);
-    var start = new Date(date.getFullYear(), 0, 0);
-    return Math.floor((day + start.getDay()) / 7);
-}
-
-function weeksOfYear(date)
-{
-    var end = new Date(date.getFullYear()+1, 0, 0);
-    return weekOfYear(end);
-}
-
-function percentageYear(date)
-{
-    return (dayOfYear(date)/daysOfYear(date)*100).toFixed(2) + "%"
-}
-
