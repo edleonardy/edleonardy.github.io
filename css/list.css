@@ -1,5 +1,3 @@
-
-
 @media (max-aspect-ratio: 1/1)
 {
     #list-container
@@ -42,7 +40,7 @@
     overflow: hidden;
     padding-top: 125%;
     height: 0;
-    background-color: var(--grey);
+    background-color: var(--neutral-colour);
 }
 
 .list-img
@@ -77,8 +75,8 @@
 .list-text 
 {
     font-family: nort, sans-serif;
-    color: var(--main-color);
-    background-color: var(--bg-color);
+    color: var(--main-colour);
+    background-color: var(--bg-colour);
     padding: 0.8rem 1.2rem;
     font-size: 0.8rem;
     line-height: 1.32rem;

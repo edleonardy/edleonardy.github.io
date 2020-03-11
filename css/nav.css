@@ -30,7 +30,7 @@ html, body
 
 #nav a, #nav a:hover, #nav a:visited, #nav a:active 
 {
-    color: var(--main-color);
+    color: var(--main-colour);
 }
 
 #nav a:hover
@@ -40,7 +40,7 @@ html, body
 
 #nav svg *
 {
-    fill: var(--main-color)!important;
+    fill: var(--main-colour)!important;
 }
 
 
@@ -99,7 +99,7 @@ html, body
     height: 100%;
     visibility: visible;
     transform: translateY(calc(3.6rem - 100%));
-    background-color: var(--translucent-bg-color);
+    background-color: var(--translucent-bg-colour);
     -webkit-backdrop-filter: blur(0.8rem);
     -moz-backdrop-filter: blur(0.8rem);
     -ms-backdrop-filter: blur(0.8rem);
@@ -172,7 +172,7 @@ html, body
 
 #links ul li a, #links ul li a:active 
 {
-    color: var(--main-color);
+    color: var(--main-colour);
 }
 
 #links ul li#links-icons a
@@ -197,7 +197,7 @@ html, body
 
 #links-icons a svg *
 {
-    fill: var(--main-color);
+    fill: var(--main-colour);
     -o-transition: 300ms;
     -ms-transition: 300ms;
     -moz-transition: 300ms;

@@ -1,138 +1,77 @@
 @import url("https://use.typekit.net/bbc6bjd.css");
 
-:root {
-    --bg-color: #0D1011;
-    --translucent-bg-color: rgba(13,16,17,0.72);
-    --main-color: #f8f8af8;
-    --accent-color: #cbb2a4;
-    --grey: #7f7f7f;
-}
-
 *
 {
     margin: 0;
     padding: 0;
+    font-family: var(--heading-serif-typeface);
 }
 
 body
 {
-    background-color: var(--bg-color);
-    color: var(--main-color);
-}
-
-body, #bg
-{
-    width: 100vw;
-    height: 100vh;
+    background-color: var(--bg-colour);
+    color: var(--main-colour);
 }
 
 #dash-container
 {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-}
-
-@media (max-aspect-ratio: 1/1)
-{
-    #dash-container
-    {
-        top: 2.8rem;
-        height: calc(100vh - 5.6rem);
-    }
-    
-    h1
-    {
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        margin: 0;
-    }
-}
-
-@media (min-aspect-ratio: 1/1)
-{
-    #dash-container
-    {
-        top: 4.8rem;
-        height: calc(100vh - 9.6rem);
-        min-height: 20rem;
-    }
-
-    h1
-    {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-        margin: 0;
-    }
-}
-
-#bg
-{
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
-    z-index: 0;
+    left: 0;
+    min-height: 14rem;
+    min-width: 28rem;
 }
 
-img#bg
-{
-    object-fit: cover;
-}
-
-#top, #center, #bottom
-{
-    width: 100%;
-    z-index: 1; 
-}
-
-#top, #bottom
-{
-    height: 4.8rem;
-    font-family: nort, sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 0.04rem;
-}
-
-#center
-{
-    height: calc(100% - 9.6rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#center-contents
-{
-    text-align: center;
-}
-
-#top-contents, #bottom-contents
+.top, .bottom, .left, .right
 {
     position: absolute;
     display: block;
-    width: 100%;
-    text-align: center;
 }
 
-#top-contents
+.top
 {
-    top: 0;
+    top: 3rem;
 }
 
-#bottom-contents
+.bottom
 {
-    bottom: 0;
+    bottom: 3rem;
+}
+
+.left
+{
+    left: 3rem;
+    text-align: left;
+}
+
+.right
+{
+    right: 3rem;
+    text-align: right;
 }
 
 #logo svg 
 {
-    width: 4rem;
-    height: 4rem;
+    width: 7.2rem;
+    height: 7.2rem;
 }
 
-h1
+#logo svg *, #logo svg
+{
+    fill: var(--main-colour)!important;
+}
+
+h1#time
 {
     font-weight: 300;
+    font-family: var(--heading-sans-typeface);
+    margin: 0;
+    font-size: 3.6rem;
+}
+
+#greeting
+{
+    font-size: 1rem;
 }

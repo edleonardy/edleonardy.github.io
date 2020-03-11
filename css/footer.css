@@ -1,5 +1,5 @@
 :root {
-    --footer-color: var(--grey);
+    --footer-color: var(--neutral-colour);
 }
 
 #footer::before
@@ -26,7 +26,7 @@
     line-height: 0.3rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
-    color: var(--grey);
+    color: var(--neutral-colour);
 }
 
 #footer-links a
@@ -41,7 +41,7 @@
 
 #footer a, #footer a:hover, #footer a:visited, #footer a:active
 {
-    color: var(--grey);
+    color: var(--neutral-colour);
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@
 
 #footer-icons a svg *
 {
-    fill: var(--grey);
+    fill: var(--neutral-colour);
     -o-transition: 300ms;
     -ms-transition: 300ms;
     -moz-transition: 300ms;
