@@ -121,7 +121,7 @@ img
 figcaption > h4
 {
     text-align: center;
-    font-family: var(--heading-sans-typeface)
+    font-family: var(--heading-sans-typeface);
     margin-top: 0.6rem;
     font-size: 0.8rem;
     letter-spacing: 0.05rem;
